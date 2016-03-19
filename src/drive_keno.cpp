@@ -1,8 +1,8 @@
-/*
- * Copyright 2016 - Elton Viana
- */
+// Copyright 2016
 
 #include <iostream>
+#include <vector>
+#include "keno.hpp"
 
 int main(int argc, char const *argv[]) {
     // Code Here
