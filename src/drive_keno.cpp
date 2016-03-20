@@ -54,17 +54,21 @@ int main(int argc, char const *argv[]) {
     else
         bet_file_name = argv[1];
 
+    // Show message on console
+    std::cout << ">>> Preparing to read bet file [data/"
+              << bet_file_name << "], please wait...\n"
+              << "--------------------------------------------------\n";
+
     // Open bet file
     std::ifstream bet("data/"+bet_file_name);
 
-    // Verify if the bet file was opened
-    if (bet) {
-        std::cout << "File opened with success\n";
-    } else {
-        std::cerr << "Error at file opening, finishing game...\n";
+    // Verify if the bet file wasn't opened and show a status message
+    if (!bet) {
+        std::cerr << ">>> The file cannot be read\n";
         bet.close();
         exit(1);
     }
+    std::cout << ">>> Bet successfully read!\n";
 
     // Copy content from file to file_data
     std::string file_data(
@@ -97,9 +101,9 @@ int main(int argc, char const *argv[]) {
     }
 
     // Show received data
-    std::cout << "Number of Rounds: " << NR << std::endl;
-    std::cout << "Initial Credit: " << IC << std::endl;
-    std::cout << bets.size() << " spots was readed - [ ";
+    std::cout << "You are going to wage a total of $" << IC << " dollars.\n";
+    std::cout << "Going for a total of " << NR << " rounds, waging $" << IC/NR << " per round.\n";
+    std::cout << "Your bet has " << bets.size() << " numbers. They are: [ ";
     for (auto i : bets)
         std::cout << i << " ";
     std::cout << "]\n";
