@@ -6,9 +6,7 @@
  *  Source with the general functions
  */
 
-#include <vector>
 #include <string>
-#include <algorithm>
 
 #include "HelperFunctions.hpp"
 
@@ -30,30 +28,4 @@ std::string filter_string(std::string str, const int *filter, int f_sz) {
             filtered_string += str[i];
     // Return the filtered_string
     return filtered_string;
-}
-
-void quick_sort(int *V, int l, int r) {
-    // Verify base case (a vector with 1 element is already sorted)
-    if (r > l+1) {
-        // Call function to partition vector and get the pivot element
-        int k = quick_sort_divide(V, l, r);
-        // Divide & Conquer: call quicksort again to sort the extremities
-        quick_sort(V, 0, k-1);
-        quick_sort(V, k+1, r);
-    }
-}
-
-int quick_sort_divide(int *V, int l, int r) {
-    // i to iterate vector and j gets the final position of the pivot
-    int i = l, j = l;
-    while (i < r) {
-        if (*(V+i) < *(V+r))
-            std::swap(*(V+i), *(V+j++));
-        i++;
-    }
-    // put the pivot on your final position
-    std::swap(*(V+r), *(V+j));
-
-    // Return the pivot position
-    return j;
 }
