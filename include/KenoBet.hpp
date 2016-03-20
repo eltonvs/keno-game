@@ -13,15 +13,15 @@
 
 class KenoBet {
  public:
-    // -----------
+    // -------------------------------------------------------------------------
     // Constructor
-    // -----------
+    // -------------------------------------------------------------------------
     //! Creates a Keno bet. It defines the maximum spots a bet may have.
     explicit KenoBet(unsigned int _maxNumSpots = 15);
 
-    // -------
+    // -------------------------------------------------------------------------
     // Getters
-    // -------
+    // -------------------------------------------------------------------------
     //! Retrieves the player's wage on this bet.
     //! @return The wage value.
     float getWage(void) const;
@@ -33,17 +33,17 @@ class KenoBet {
     //! @return The vector<int> with the player's spots picked so far.
     std::vector<int> getSpots(void) const;
 
-    // -------
+    // -------------------------------------------------------------------------
     // Setters
-    // -------
+    // -------------------------------------------------------------------------
     //! Sets the amount of money the player is betting.
     //! @param _wage The wage.
     //! @return True if we have a wage above zero; false otherwise.
     bool setWage(float _wage);
 
-    // -------
+    // -------------------------------------------------------------------------
     // Methods
-    // -------
+    // -------------------------------------------------------------------------
     //! Resets a bet to an empty state.
     void reset(void);
     //! Adds a number to the spots only if the number is not already there.
