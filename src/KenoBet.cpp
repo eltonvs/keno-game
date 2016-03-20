@@ -22,13 +22,15 @@ float KenoBet::getWage(void) const {
 
 // Determine how many spots match the hits passed as argument.
 std::vector<int> KenoBet::getHits(const std::vector<int> &_hits) const {
-    std::vector<int> a; // the vector with the matched hits
-    for (int i = 0; i < 20; ++i)
-    {
-          if (in_array(_hits[i], this->m_spots.data()n , this->m_spots.size())) // verify if the hit element is one of the bet element. if true, put the element in the new vector a
-                a.push_back(_hits[i]);  
-    }
-    return a; // return the vector with the marched hits
+    // The vector with the matched hits
+    std::vector<int> matches;
+    for (int i = 0; i < 20; i++)
+        // Verify if the hit element is one of the bet element.
+        // If true, append the element in a
+        if (in_array(_hits[i], this->m_spots.data(), this->m_spots.size()))
+            matches.push_back(_hits[i]);
+    // Return the vector with the marched hits
+    return matches;
 }
 
 // Return an vector<int> with the spots the player has picked so far.
