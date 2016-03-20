@@ -53,6 +53,9 @@ class KenoBet {
     //! Returns to the current number of spots in the player's bet.
     //! @return Number of spots present in the bet.
     std::size_t numChosen(void) const;
+    //! Returns a vector with 20 unique random numbers in range [1, 80].
+    //! @return A vector with 20 unique random numbers in range [1, 80].
+    std::vector<int> generateHits(void) const;
 
  private:
     std::vector<int> m_spots;  // <! The player's bet.
