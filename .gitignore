@@ -27,3 +27,6 @@
 *.out
 *.app
 bin/*
+
+# Data files
+data/
