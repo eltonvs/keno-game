@@ -1,6 +1,6 @@
 // Copyright 2016
 
 #include <vector>
-#include "keno.hpp"
+#include "KenoBet.hpp"
 
 // KenoBet functions here

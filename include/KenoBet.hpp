@@ -1,7 +1,7 @@
 // Copyright 2016
 
-#ifndef _keno_hpp_
-#define _keno_hpp_
+#ifndef _KenoBet_hpp_
+#define _KenoBet_hpp_
 
 #include <vector>
 

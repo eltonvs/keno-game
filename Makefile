@@ -6,7 +6,7 @@ CFLAGS = -Wall -std=c++11
 BIN_DIR = bin
 TARGET = keno
 SRC1 = drive_keno
-SRC2 = kenobet
+SRC2 = KenoBet
 SRC_DIR = src
 INCLUDE_DIR = include
 

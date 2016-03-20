@@ -5,7 +5,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "keno.hpp"
+#include "KenoBet.hpp"
 
 constexpr auto MAX_SPOTS(15u);   // <! The max spots allowed
 constexpr auto MAX_PROPER(80u);  // <! The max Proper (range [1, 80])
