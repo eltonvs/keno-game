@@ -23,12 +23,13 @@ int main(int argc, char const *argv[]) {
     std::ifstream bet("data/"+bet_file_name);
 
     // Verify if the bet file was opened
-    if (bet)
-        std::cout << "File opened with success" << std::endl;
-    else
-        std::cerr << "Error at file opening" << std::endl;
-
-    bet.close();
+    if (bet) {
+        std::cout << "File opened with success\n";
+    } else {
+        std::cerr << "Error at file opening, finishing game...\n";
+        bet.close();
+        exit(1);
+    }
 
     return EXIT_SUCCESS;
 }
