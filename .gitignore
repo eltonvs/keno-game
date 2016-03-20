@@ -33,3 +33,7 @@ data/
 
 # Docs files
 docs/
+
+# Ignore tests file
+tests/
+src/tests*
