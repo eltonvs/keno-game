@@ -12,10 +12,6 @@ class KenoBet {
     // -----------
     //! Creates a Keno bet. It defines the maximum spots a bet may have.
     explicit KenoBet(unsigned int _maxNumSpots = 15);
-    // Adds a number to the spots only if the number is not already there.
-    // @param _spot The number we wish to include in the bet.
-    // @return T if number chosen is successfully inserted; F otherwise.
-    bool addNumber(int _spot);
 
     // -------
     // Getters
@@ -44,6 +40,10 @@ class KenoBet {
     // -------
     //! Resets a bet to an empty state.
     void reset(void);
+    // Adds a number to the spots only if the number is not already there.
+    // @param _spot The number we wish to include in the bet.
+    // @return T if number chosen is successfully inserted; F otherwise.
+    bool addNumber(int _spot);
     // Returns to the current number of spots in the player's bet.
     // @return Number of spots present in the bet.
     std::size_t numChosen(void) const;
