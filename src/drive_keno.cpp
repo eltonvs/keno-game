@@ -5,7 +5,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
 #include "KenoBet.hpp"
+#include "HelperFunctions.hpp"
 
 constexpr auto MAX_SPOTS(15u);   // <! The max spots allowed
 constexpr auto MAX_PROPER(80u);  // <! The max Proper (range [1, 80])
@@ -17,32 +19,6 @@ constexpr int ALLOWED_CHARS[] = {
     46,  // Dot
     48, 49, 50, 51, 52, 53, 54, 55, 56, 57  // Numbers [0, 9]
 };
-
-//! Verify if a number is inside an array
-//! @param x The number to be searched in array
-//! @param v The array to be searched in
-//! @param sz The array size
-//! @return True if the number is inside the array; false otherwise
-bool in_array(int x, const int *v, unsigned sz) {
-    for (auto i(0u); i < sz; i++)
-        if (x == v[i])
-            return true;
-    return false;
-}
-
-//! Function to filter a string by an filter
-//! @param str The string to be filtered
-//! @param filter An array with the ASCII code from the allowed chars
-//! @param f_sz The filter array size
-//! @return The filtered string
-std::string filter_string(std::string str, const int *filter, int f_sz) {
-    // Create the string to be returned
-    std::string filtered_string;
-    for (auto i(0u); i < str.size(); i++)
-        if (in_array(str[i], filter, f_sz))
-            filtered_string += str[i];
-    return filtered_string;
-}
 
 int main(int argc, char const *argv[]) {
     // Store the bet file name
