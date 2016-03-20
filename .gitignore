@@ -30,3 +30,6 @@ bin/*
 
 # Data files
 data/
+
+# Docs files
+docs/
