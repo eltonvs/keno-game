@@ -23,16 +23,16 @@ class KenoBet {
     //! @param _hits List of hits randomly chosen by the computer.
     //! @return An vector with the list of hits.
     std::vector<int> getHits(const std::vector<int> &_hits) const;
-    // Return an vector<int> with the spots the player has picked so far.
+    //! Return an vector<int> with the spots the player has picked so far.
     //! @return The vector<int> with the player's spots picked so far.
     std::vector<int> getSpots(void) const;
 
     // -------
     // Setters
     // -------
-    // Sets the amount of money the player is betting.
-    // @param _wage The wage.
-    // @return True if we have a wage above zero; false otherwise.
+    //! Sets the amount of money the player is betting.
+    //! @param _wage The wage.
+    //! @return True if we have a wage above zero; false otherwise.
     bool setWage(float _wage);
 
     // -------
