@@ -19,11 +19,18 @@ KenoBet::KenoBet(unsigned int _maxNumSpots) {
 float KenoBet::getWage(void) const {
     return this->m_wage;
 }
+
 // Determine how many spots match the hits passed as argument.
 std::vector<int> KenoBet::getHits(const std::vector<int> &_hits) const {
-    // Just to stabilize
-    return _hits;
+    std::vector<int> a; // the vector with the matched hits
+    for (int i = 0; i < 20; ++i)
+    {
+          if (in_array(_hits[i], this->m_spots.data(), this->m_spots.size())) // verify if the hit element is one of the bet element. if true, put the element in the new vector a
+                a.push_back(_hits[i]);  
+    }
+    return a; // return the vector with the marched hits
 }
+
 // Return an vector<int> with the spots the player has picked so far.
 std::vector<int> KenoBet::getSpots(void) const {
     return this->m_spots;
@@ -42,8 +49,9 @@ bool KenoBet::setWage(float _wage) {
 // -------
 // Resets a bet to an empty state.
 void KenoBet::reset(void) {
-    // Code Here
+    m_spots.clear();
 }
+
 // Adds a number to the spots only if the number is not already there.
 bool KenoBet::addNumber(int _spot) {
     if (!in_array(_spot, this->m_spots.data(), this->m_spots.size())) {
