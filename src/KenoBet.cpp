@@ -76,10 +76,13 @@ std::vector<int> KenoBet::generateHits(void) const {
     std::vector<int> hits;
     for (int i = 0; i < 80; i++)
         hits.push_back(i+1);
-    // std::random_device seed;
-    // std::shuffle(hits.begin(), hits.end(), std::default_random_engine(seed));
-    std::random_shuffle(hits.begin(), hits.end());
-    // hits.shuffle();
+    // Create a real random number
+    std::random_device r;
+    // Shuffle vector content using the random number as seed
+    std::shuffle(hits.begin(), hits.end(), std::default_random_engine(r()));
+    // Resize vector to 20 elements
     hits.resize(20);
+    // Sort vector elements
+    std::sort(hits.begin(), hits.end());
     return hits;
 }
