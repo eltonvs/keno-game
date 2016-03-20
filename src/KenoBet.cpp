@@ -25,7 +25,7 @@ std::vector<int> KenoBet::getHits(const std::vector<int> &_hits) const {
     std::vector<int> a; // the vector with the matched hits
     for (int i = 0; i < 20; ++i)
     {
-          if (in_array(_hits[i], this->m_spots.data(), this->m_spots.size())) // verify if the hit element is one of the bet element. if true, put the element in the new vector a
+          if (in_array(_hits[i], this->m_spots.data()n , this->m_spots.size())) // verify if the hit element is one of the bet element. if true, put the element in the new vector a
                 a.push_back(_hits[i]);  
     }
     return a; // return the vector with the marched hits
