@@ -1,4 +1,10 @@
-// Copyright 2016
+/*!
+ *  @file HelperFunctions.hpp
+ *  @brief Headers of general functions
+ *  @copyright Copyright &copy; 2016. All rights reserved.
+ *
+ *  Header with the with the general functions prototypes
+ */
 
 #ifndef _HelperFunctions_hpp_
 #define _HelperFunctions_hpp_

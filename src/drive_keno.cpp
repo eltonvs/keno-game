@@ -1,4 +1,16 @@
-// Copyright 2016
+/*!
+ *  @mainpage Keno Game
+ *  @authors Elton de Souza Vieira
+ *  @authors Pedro Arthur Medeiros Fernandes
+ *  @date March, 2016
+ *  @copyright Copyright &copy; 2016. All rights reserved.
+ *  @version 1.0
+ *
+ *  @file drive_keno.cpp
+ *  @brief Driver Program
+ *
+ *  File with the main function
+ */
 
 #include <iostream>
 #include <fstream>
