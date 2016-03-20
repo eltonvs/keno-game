@@ -25,4 +25,16 @@ bool in_array(int x, const int *v, unsigned sz);
 //! @return The filtered string
 std::string filter_string(std::string str, const int *filter, int f_sz);
 
+//! Quick Sort function
+//! @param V a pointer to the first position of the vector to be sorted
+//! @param l the left position of the vector
+//! @param r the right position of the vector
+void quick_sort(int *V, int l, int r);
+
+//! Quick Sort dependency function
+//! @param V a pointer to the first position of the vector to be divided
+//! @param l the left position of the vector
+//! @param r the right position of the vector
+int quick_sort_divide(int *V, int l, int r);
+
 #endif
