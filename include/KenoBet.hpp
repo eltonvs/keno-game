@@ -16,15 +16,15 @@ class KenoBet {
     // -------
     // Getters
     // -------
-    // Retrieves the player's wage on this bet.
-    // @return The wage value.
+    //! Retrieves the player's wage on this bet.
+    //! @return The wage value.
     float getWage(void) const;
-    // Determine how many spots match the hits passed as argument.
-    // @param _hits List of hits randomly chosen by the computer.
-    // @return An vector with the list of hits.
+    //! Determine how many spots match the hits passed as argument.
+    //! @param _hits List of hits randomly chosen by the computer.
+    //! @return An vector with the list of hits.
     std::vector<int> getHits(const std::vector<int> &_hits) const;
     // Return an vector<int> with the spots the player has picked so far.
-    // @return The vector<int> with the player's spots picked so far.
+    //! @return The vector<int> with the player's spots picked so far.
     std::vector<int> getSpots(void) const;
 
     // -------
@@ -40,12 +40,12 @@ class KenoBet {
     // -------
     //! Resets a bet to an empty state.
     void reset(void);
-    // Adds a number to the spots only if the number is not already there.
-    // @param _spot The number we wish to include in the bet.
-    // @return T if number chosen is successfully inserted; F otherwise.
+    //! Adds a number to the spots only if the number is not already there.
+    //! @param _spot The number we wish to include in the bet.
+    //! @return T if number chosen is successfully inserted; F otherwise.
     bool addNumber(int _spot);
-    // Returns to the current number of spots in the player's bet.
-    // @return Number of spots present in the bet.
+    //! Returns to the current number of spots in the player's bet.
+    //! @return Number of spots present in the bet.
     std::size_t numChosen(void) const;
 
  private:
