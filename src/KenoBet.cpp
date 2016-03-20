@@ -1,4 +1,10 @@
-// Copyright 2016
+/*!
+ *  @file KenoBet.cpp
+ *  @brief Source for KenoBet class
+ *  @copyright Copyright &copy; 2016. All rights reserved.
+ *
+ *  File with the KenoBet class Methods
+ */
 
 #include <vector>
 #include "KenoBet.hpp"

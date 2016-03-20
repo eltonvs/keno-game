@@ -1,4 +1,10 @@
-// Copyright 2016
+/*!
+ *  @file KenoBet.hpp
+ *  @brief Headers of KenoBet Class
+ *  @copyright Copyright &copy; 2016. All rights reserved.
+ *
+ *  Header with the with KenoBet Class
+ */
 
 #ifndef _KenoBet_hpp_
 #define _KenoBet_hpp_
