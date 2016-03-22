@@ -33,6 +33,10 @@ class KenoBet {
     //! Return an vector<int> with the spots the player has picked so far.
     //! @return The vector<int> with the player's spots picked so far.
     std::vector<int> getSpots(void) const;
+    //! Gets the corresponding Payout value given the hits number
+    //! @param _hits The number of hits
+    //! @return The Payout Value
+    float getPayout(int _hits);
 
     // -------------------------------------------------------------------------
     // Setters

@@ -45,6 +45,10 @@ std::vector<int> KenoBet::getHits(const std::vector<int> &_hits) const {
 std::vector<int> KenoBet::getSpots(void) const {
     return this->m_spots;
 }
+// Gets the corresponding Payout value given the hits number
+float KenoBet::getPayout(int _hits) {
+    return this->m_payouts[this->numChosen()-1][_hits];
+}
 
 // -----------------------------------------------------------------------------
 // Setters
