@@ -11,6 +11,16 @@
 
 #include <string>
 
+// Global Var
+//! A array with the allowed chars (in ASCII code)
+constexpr int ALLOWED_CHARS[] = {
+    9,   // Tab
+    10,  // Line break
+    32,  // White space
+    46,  // Dot
+    48, 49, 50, 51, 52, 53, 54, 55, 56, 57  // Numbers [0, 9]
+};
+
 //! Verify if a number is inside an array
 //! @param x The number to be searched in array
 //! @param v The array to be searched in

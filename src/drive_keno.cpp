@@ -23,14 +23,6 @@
 
 constexpr auto MAX_SPOTS(15u);   // <! The max spots allowed
 constexpr auto MAX_PROPER(80u);  // <! The max Proper (range [1, 80])
-//! A array with the allowed chars (in ASCII code)
-constexpr int ALLOWED_CHARS[] = {
-    9,   // Tab
-    10,  // Line break
-    32,  // White space
-    46,  // Dot
-    48, 49, 50, 51, 52, 53, 54, 55, 56, 57  // Numbers [0, 9]
-};
 
 int main(int argc, char const *argv[]) {
     // Store the bet file name
