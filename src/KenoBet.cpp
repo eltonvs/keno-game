@@ -17,7 +17,8 @@
 // -----------------------------------------------------------------------------
 // Creates a Keno bet. It defines the maximum spots a bet may have.
 KenoBet::KenoBet(unsigned int _maxNumSpots) {
-    this->m_spots.resize(_maxNumSpots);
+    this->m_maxSpots = _maxNumSpots > 15 ? 15 : _maxNumSpots;
+    this->m_spots.resize(0);
 }
 
 // -----------------------------------------------------------------------------
@@ -58,10 +59,12 @@ bool KenoBet::setWage(float _wage) {
 // Resets a bet to an empty state.
 void KenoBet::reset(void) {
     m_spots.clear();
+    m_spots.resize(0);
 }
 // Adds a number to the spots only if the number is not already there.
 bool KenoBet::addNumber(int _spot) {
-    if (!in_array(_spot, this->m_spots.data(), this->m_spots.size())) {
+    if (!in_array(_spot, this->m_spots.data(), this->m_spots.size()) &&
+        this->m_spots.size() < this->m_maxSpots) {
         this->m_spots.push_back(_spot);
         return true;
     }

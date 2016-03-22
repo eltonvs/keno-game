@@ -61,6 +61,8 @@ class KenoBet {
     std::vector<int> m_spots;  // <! The player's bet.
     float m_wage;              // <! The player's wage
     unsigned int m_maxSpots;   // <! Max # of spots allowed for this bet.
+    //! The payouts array.
+    std::vector<std::vector<int>> m_payouts;
 };
 
 #endif
