@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <random>
+#include <iostream>
 #include <algorithm>
 #include "KenoBet.hpp"
 #include "HelperFunctions.hpp"
@@ -75,7 +76,6 @@ bool KenoBet::addNumber(int _spot) {
 std::size_t KenoBet::numChosen(void) const {
     return m_spots.size();
 }
-
 std::vector<int> KenoBet::generateHits(void) const {
     std::vector<int> hits;
     for (int i = 0; i < 80; i++)
@@ -89,4 +89,15 @@ std::vector<int> KenoBet::generateHits(void) const {
     // Sort vector elements
     std::sort(hits.begin(), hits.end());
     return hits;
+}
+// Print a Payout Table
+void KenoBet::printPayoutsTable() {
+    // Print Table Header
+    std::cout << "\t--------+---------\n"
+              << "\tHits\t| Payout\n"
+              << "\t--------+---------\n";
+    // Print Table Content
+    for (auto i(0u); i <= this->numChosen(); i++)
+        std::cout << "\t" << i << "\t| "
+                  << this->m_payouts[this->numChosen()-1][i] << "\n";
 }

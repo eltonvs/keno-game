@@ -9,6 +9,7 @@
 #ifndef _KenoBet_hpp_
 #define _KenoBet_hpp_
 
+#include <string>
 #include <vector>
 
 class KenoBet {
@@ -56,13 +57,31 @@ class KenoBet {
     //! Returns a vector with 20 unique random numbers in range [1, 80].
     //! @return A vector with 20 unique random numbers in range [1, 80].
     std::vector<int> generateHits(void) const;
+    //! Print a Payout Table
+    void printPayoutsTable();
 
  private:
     std::vector<int> m_spots;  // <! The player's bet.
     float m_wage;              // <! The player's wage
     unsigned int m_maxSpots;   // <! Max # of spots allowed for this bet.
     //! The payouts array.
-    std::vector<std::vector<int>> m_payouts;
+    std::vector<std::vector<float>> m_payouts = {
+        {0, 3},
+        {0, 1, 9},
+        {0, 1, 2, 16},
+        {0, 0.5, 2, 6, 12},
+        {0, 0.5, 1, 3, 15, 50},
+        {0, 0.5, 1, 2, 3, 30, 75},
+        {0, 0.5, 0.5, 1, 6, 12, 36, 100},
+        {0, 0.5, 0.5, 1, 3, 6, 19, 90, 720},
+        {0, 0.5, 0.5, 1, 2, 4, 8, 20, 80, 1200},
+        {0, 0, 0.5, 1, 2, 3, 5, 10, 30, 600, 1800},
+        {0, 0, 0.5, 1, 1, 2, 6, 15, 25, 180, 1000, 3000},
+        {0, 0, 0, 0.5, 1, 2, 4, 24, 72, 250, 500, 2000, 4000},
+        {0, 0, 0, 0.5, 0.5, 3, 4, 5, 20, 80, 240, 500, 3000, 6000},
+        {0, 0, 0, 0.5, 0.5, 2, 3, 5, 12, 50, 150, 500, 1000, 2000, 7500},
+        {0, 0, 0, 0.5, 0.5, 1, 2, 5, 15, 50, 150, 300, 600, 1200, 2500, 10000}
+    };
 };
 
 #endif
