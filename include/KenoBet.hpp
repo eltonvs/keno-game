@@ -12,12 +12,14 @@
 #include <string>
 #include <vector>
 
+//! The main Class
 class KenoBet {
  public:
     // -------------------------------------------------------------------------
     // Constructor
     // -------------------------------------------------------------------------
     //! Creates a Keno bet. It defines the maximum spots a bet may have.
+    //! @param _maxNumSpots Receives the max spots number
     explicit KenoBet(unsigned int _maxNumSpots = 15);
 
     // -------------------------------------------------------------------------
