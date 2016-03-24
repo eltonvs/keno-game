@@ -22,7 +22,7 @@ And to execute:
 $ ./bin/keno yout_bet_file.dat
 ```
 
-** If any bet file was specified, the program will run with an demo bet file (located in `data/default_bet.dat`).
+** If no bet file was specified, the program will run with an demo bet file (located in `data/default_bet.dat`).
 
 ### Debugging
 If you want to debug this game, use our debug version (with the `-g -O0` flags):
