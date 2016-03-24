@@ -71,7 +71,7 @@ bool KenoBet::addNumber(int _spot) {
     if (!in_array(_spot, this->m_spots.data(), this->m_spots.size()) &&
         this->m_spots.size() < this->m_maxSpots && _spot > 0 && _spot < 80) {
         this->m_spots.push_back(_spot);
-        std::sort(this->m_spots.begin(), this->m_spots.end());
+        quick_sort(this->m_spots.data(), this->m_spots.size());
         return true;
     }
     return false;
@@ -91,7 +91,7 @@ std::vector<int> KenoBet::generateHits(void) const {
     // Resize vector to 20 elements
     hits.resize(20);
     // Sort vector elements
-    std::sort(hits.begin(), hits.end());
+    quick_sort(hits.data(), hits.size());
     return hits;
 }
 // Print a Payout Table

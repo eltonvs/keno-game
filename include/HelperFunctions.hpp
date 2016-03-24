@@ -35,4 +35,31 @@ bool in_array(int x, const int *v, unsigned sz);
 //! @return The filtered string
 std::string filter_string(std::string str, const int *filter, int f_sz);
 
+//! Auxiliar function, used to define the order to be sorted
+//! @param a The first parameter to be compared
+//! @param b The second parameter to be compared
+//! @return true if the condition is attended, false otherwise
+bool compare(int a, int b);
+
+//! Function to divide the vector in two subvectors (quick_sort dependency)
+//! @param V The vector to be divided
+//! @param l The position of the first vector's element
+//! @param r The position of the last vector's element
+//! @param comp Pointer to the function to be used to comparisons
+//! @return the position of the pivot element
+int divide(int *V, int l, int r, bool (*comp)(int, int) = compare);
+
+//! The quick_sort engine, the function to manage the divide() and the recursion
+//! @param V The vector to be sorted
+//! @param l The position of the first vector's element
+//! @param r The position of the last vector's element
+//! @param comp Pointer to the function to be used to comparisons
+void quick_sort_engine(int *V, int l, int r, bool (*comp)(int, int) = compare);
+
+//! The quick_sort friendly function to be called
+//! @param V The vector to be sorted
+//! @param size The vector's size
+//! @param comp Pointer to the function to be used to comparisons
+void quick_sort(int *V, int size, bool (*comp)(int, int) = compare);
+
 #endif
