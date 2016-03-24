@@ -19,7 +19,7 @@ $ make
 
 And to execute:
 ```shell
-$ ./bin/keno yout_bet_file.dat
+$ ./bin/keno your_bet_file.dat
 ```
 
 ** If no bet file was specified, the program will run with an demo bet file (located in `data/default_bet.dat`).
