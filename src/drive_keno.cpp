@@ -83,11 +83,26 @@ int main(int argc, char const *argv[]) {
         kb.addNumber(tmp);
     }
 
+    // -------------------------------------------------------------------------
+    // Error Handling
+    // -------------------------------------------------------------------------
+    // 1 - If the file is invalid
+    if (kb.getSpots().size() == 0) {
+        std::cerr << ">>> Your bet file is invalid!\n";
+        exit(1);
+    }
+    // 2 - If wage = 0
+    if (IC == 0) {
+        std::cerr << ">>> You cannot wage $0. Increase your bet!\n";
+        exit(1);
+    }
+
     // Show received data
     std::cout << "    You are going to wage a total of $" << IC << " dollars.\n";
     std::cout << "    Going for a total of " << NR << " rounds, waging $"
               << IC/NR << " per round.\n";
-    std::cout << "    Your bet has " << kb.numChosen() << " numbers. They are: [ ";
+    std::cout << "    Your bet has " << kb.numChosen() << (kb.numChosen() == 1 ?
+                 " number. He is: [ " : " numbers. They are: [ ");
     for (auto i : kb.getSpots()) std::cout << i << " ";
     std::cout << "]\n";
     kb.printPayoutsTable();

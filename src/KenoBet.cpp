@@ -69,7 +69,7 @@ void KenoBet::reset(void) {
 // Adds a number to the spots only if the number is not already there.
 bool KenoBet::addNumber(int _spot) {
     if (!in_array(_spot, this->m_spots.data(), this->m_spots.size()) &&
-        this->m_spots.size() < this->m_maxSpots && _spot > 0 && _spot < 80) {
+        this->m_spots.size() < this->m_maxSpots && _spot > 0 && _spot <= 80) {
         this->m_spots.push_back(_spot);
         quick_sort(this->m_spots.data(), this->m_spots.size());
         return true;

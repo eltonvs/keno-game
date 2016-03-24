@@ -14,7 +14,6 @@
 // Global Var
 //! A array with the allowed chars (in ASCII code)
 constexpr int ALLOWED_CHARS[] = {
-    9,   // Tab
     32,  // White space
     46,  // Dot
     48, 49, 50, 51, 52, 53, 54, 55, 56, 57  // Numbers [0, 9]
