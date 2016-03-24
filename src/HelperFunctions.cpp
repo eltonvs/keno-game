@@ -25,8 +25,7 @@ std::string filter_string(std::string str, const int *filter, int f_sz) {
     std::string filtered_string;
     for (auto i(0u); i < str.size(); i++)
         // If the char is on allowed chars (filter), append to filtered_string
-        if (in_array(str[i], filter, f_sz))
-            filtered_string += str[i];
+        filtered_string += in_array(str[i], filter, f_sz) ? str[i] : ' ';
     // Return the filtered_string
     return filtered_string;
 }
