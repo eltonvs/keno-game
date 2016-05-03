@@ -1,5 +1,7 @@
 # Keno Game
 
+[![Build Status](https://travis-ci.org/eltonvs/keno-game.svg?branch=master)](https://travis-ci.org/eltonvs/keno-game)
+
 The **Keno Game** is a gambling game like a lottery or bingo.
 
 This game consists in **set a bet** picking a set of, at most, 15 numbers in range `[1, 80]`, **set the number of rounds** and **set a wage** that will be equally divided between the rounds.
