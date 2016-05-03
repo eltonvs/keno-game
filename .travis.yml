@@ -8,4 +8,4 @@ compiler:
   - clang
 
 script:
-  - clang++ -std=c++11 src/drive_keno.cpp src/HelperFunctions.cpp src/KenoBet.cpp -I include -o keno && ./keno default_bet.dat
+  - clang++ -std=c++11 src/* -I include -o keno && ./keno default_bet.dat
